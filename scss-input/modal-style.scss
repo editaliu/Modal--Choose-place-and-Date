@@ -1,0 +1,142 @@
+$fonts: 'Open Sans';
+$transpGrey: #BBBBBB;
+$blue: #15498F;
+$main-border: 1px solid #DDDDDD;
+
+%rowFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+%blur-line{
+    content: "";
+    display: block;
+    margin-right: 10%;
+    margin-right: 20px;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 5);
+//    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 18px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fonts;
+}
+
+//Modal background
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+//Modal box position (centered in the page)
+.center-block {
+    position: fixed;
+    z-index: 999;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+// Modal content 
+.modal-content {
+    @extend %rowFlex;
+    background-color: #FFFFFF;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 650px;
+    height: 454px;
+}
+
+p,
+div p{
+    font-size: 13px;
+    margin: 0;
+}
+
+//Select clinic field START
+.selectClinic{
+    width: 42%;
+    padding-top: 22px;
+//    padding-left: 30px;
+    border-right: $main-border;
+}
+.spaceLeft{
+    padding-left: 30px;
+}
+.selectClinic::after{
+    @extend %blur-line;
+    width: calc(108% + 1px);
+}
+//Select clinic field END
+
+
+//Select date field START
+.selectDate{
+    width: 58%;
+    color: $blue;
+    padding: 22px;
+}
+.selectDate::after{
+    @extend %blur-line;
+    width: calc(106% + 2px);
+}
+.alignX{
+    @extend %rowFlex;
+    justify-content: space-between;
+}
+// START Close button 
+.close {
+    color: $transpGrey;
+    float: right;
+    font-size: 28px;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info{
+    @extend %rowFlex;
+}
+.alignP{
+    padding-left: 5px;
+}
+//END Close button
+
+.selectP{
+    font-size: 28px;
+    color: $blue;
+}
+//Select date field END
+
+
+
+
+
+
+
+
+
+
+
+
+
