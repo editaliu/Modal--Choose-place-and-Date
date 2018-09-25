@@ -2,6 +2,7 @@ $fonts: 'Open Sans';
 $transpGrey: #BBBBBB;
 $blue: #15498F;
 $main-border: 1px solid #DDDDDD;
+$blue-border: 10px solid $blue;
 
 %rowFlex{
     display: flex;
@@ -14,8 +15,8 @@ $main-border: 1px solid #DDDDDD;
     margin-right: 10%;
     margin-right: 20px;
     border-top: 1px solid #DDDDDD;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 5);
-//    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+//    box-shadow: 0 2px 8px rgba(0, 0, 0, 5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     margin-top: 18px;
 }
 
@@ -32,18 +33,22 @@ body{
 //Modal background
 .modal {
     position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.2);
-    z-index: 3;
 }
 
 //Modal box position (centered in the page)
 .center-block {
     position: fixed;
     z-index: 999;
+    height: 50%;
+    width: 50%;
+//    min-width: 650px;
+//    min-height: 454px;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -81,9 +86,32 @@ div p{
 .spaceLeft{
     padding-left: 30px;
 }
-.selectClinic::after{
+.select-header::after{
     @extend %blur-line;
     width: calc(108% + 1px);
+}
+.clinics{
+    padding-bottom: 22px;
+    padding-top: 21px;
+    border-bottom: $main-border;
+    @extend %rowFlex;
+    
+}
+.clinics:last-child{
+    border-bottom: none;
+}
+.clinics:hover{
+    border-right: $blue-border;
+    border-left: $blue-border;
+}
+.clinics img{
+    width: 17.2%;
+    height: 15%;
+}
+
+.darker{
+    font-weight: bolder;
+    font-size: 16px;
 }
 //Select clinic field END
 
@@ -129,7 +157,14 @@ div p{
 //Select date field END
 
 
-
+//Responsive
+//.center-block.is-responsive {
+//  width: 60%; 
+//  height: 60%;
+//  min-width: 200px;
+//  max-width: 400px;
+//  padding: 40px;
+//}
 
 
 
