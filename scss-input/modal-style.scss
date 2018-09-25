@@ -79,23 +79,23 @@ div p{
 //Select clinic field START
 .selectClinic{
     width: 42%;
-    padding-top: 22px;
+    padding-top: 20px;
 //    padding-left: 30px;
     border-right: $main-border;
 }
 .spaceLeft{
     padding-left: 30px;
 }
+//Blur line after header
 .select-header::after{
     @extend %blur-line;
-    width: calc(108% + 1px);
+    width: 100%;
 }
 .clinics{
     padding-bottom: 22px;
     padding-top: 21px;
     border-bottom: $main-border;
     @extend %rowFlex;
-    
 }
 .clinics:last-child{
     border-bottom: none;
@@ -120,11 +120,11 @@ div p{
 .selectDate{
     width: 58%;
     color: $blue;
-    padding: 22px;
+    padding-top: 20px;
 }
-.selectDate::after{
-    @extend %blur-line;
-    width: calc(106% + 2px);
+.space-left-right{
+    padding-left: 22px;
+    padding-right: 22px;
 }
 .alignX{
     @extend %rowFlex;
@@ -154,6 +154,9 @@ div p{
     font-size: 28px;
     color: $blue;
 }
+//START Calendar 
+
+//END Calendar
 //Select date field END
 
 
