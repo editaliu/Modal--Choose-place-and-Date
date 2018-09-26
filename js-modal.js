@@ -22,3 +22,7 @@ window.onclick = function(event) {
 }
 
 //CALENDAR
+//Change color inclick
+$('span').click(function(){
+  $(this).toggleClass('clicked');
+});
