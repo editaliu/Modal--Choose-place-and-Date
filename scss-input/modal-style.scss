@@ -1,21 +1,22 @@
 $fonts: 'Open Sans';
 $transpGrey: #BBBBBB;
+$fontGrey: #333333;
 $blue: #15498F;
 $main-border: 1px solid #DDDDDD;
 $blue-border: 10px solid $blue;
+$thick-border: 3px solid $blue;
 
-%rowFlex{
+%rowFlex {
     display: flex;
     flex-direction: row;
 }
 
-%blur-line{
+%blur-line {
     content: "";
     display: block;
     margin-right: 10%;
     margin-right: 20px;
-    border-top: 1px solid #DDDDDD;
-//    box-shadow: 0 2px 8px rgba(0, 0, 0, 5);
+    border-top: 1px solid #DDDDDD; //    box-shadow: 0 2px 8px rgba(0, 0, 0, 5);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     margin-top: 18px;
 }
@@ -26,8 +27,9 @@ $blue-border: 10px solid $blue;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: $fonts;
+    color: $fontGrey;
 }
 
 //Modal background
@@ -46,9 +48,8 @@ body{
     position: fixed;
     z-index: 999;
     height: 50%;
-    width: 50%;
-//    min-width: 650px;
-//    min-height: 454px;
+    width: 50%; //    min-width: 650px;
+    //    min-height: 454px;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -71,110 +72,202 @@ body{
 }
 
 p,
-div p{
+div p {
     font-size: 13px;
     margin: 0;
 }
 
 //Select clinic field START
-.selectClinic{
+.selectClinic {
     width: 42%;
-    padding-top: 20px;
-//    padding-left: 30px;
+    padding-top: 20px; //    padding-left: 30px;
     border-right: $main-border;
 }
-.spaceLeft{
+
+.spaceLeft {
     padding-left: 30px;
 }
+
 //Blur line after header
-.select-header::after{
+.select-header::after {
     @extend %blur-line;
     width: 100%;
 }
-.clinics{
+
+.clinics {
     padding-bottom: 22px;
     padding-top: 21px;
     border-bottom: $main-border;
     @extend %rowFlex;
 }
-.clinics:last-child{
+
+.clinics:last-child {
     border-bottom: none;
 }
-.clinics:hover{
+
+.clinics:hover {
     border-right: $blue-border;
     border-left: $blue-border;
 }
-.clinics img{
+
+.clinics img {
     width: 17.2%;
     height: 15%;
 }
 
-.darker{
+.darker {
     font-weight: bolder;
     font-size: 16px;
 }
+
 //Select clinic field END
-
-
 //Select date field START
-.selectDate{
+.selectDate {
     width: 58%;
     color: $blue;
     padding-top: 20px;
 }
-.space-left-right{
+
+.space-left-right {
     padding-left: 22px;
     padding-right: 22px;
 }
-.alignX{
+
+.alignX {
     @extend %rowFlex;
     justify-content: space-between;
 }
+
 // START Close button 
 .close {
     color: $transpGrey;
     float: right;
     font-size: 28px;
 }
+
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-.info{
+
+.info {
     @extend %rowFlex;
 }
-.alignP{
+
+.alignP {
     padding-left: 5px;
 }
-//END Close button
 
-.selectP{
+//END Close button
+.selectP {
     font-size: 28px;
     color: $blue;
 }
-//START Calendar 
 
-//END Calendar
-//Select date field END
+//START Calendar
+section.month {
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: auto;
+}
+
+header {
+    position: relative;
+    @extend %rowFlex;
+    justify-content: space-between;
+    padding-top: 18px;
+}
+
+.calendar-row {
+    @extend %rowFlex;
+    justify-content: space-between;
+}
+
+.calendar-row:hover {
+    border-bottom: $thick-border;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 16px;
+    color: $fontGrey;
+}
+
+h1::before,
+h1:after {
+    content: " ";
+    white-space: pre;
+}
+
+header > img:first-child:hover {
+    border-left: $thick-border;
+}
+
+header > img:last-child:hover {
+    border-right: $thick-border;
+}
+
+article {
+    padding: 6px 0 25px 25px;
+}
+
+.days {
+    padding-top: 4px;
+    padding-bottom: 12px;
+}
+
+.days p {
+    display: flex;
+    flex-direction: column;
+}
+
+article p,
+article span {
+    display: block;
+    float: left;
+    width: 58px;
+    height: 42px;
+    margin: 4px;
+    text-align: center;
+}
+
+article p {
+    font-size: 21px;
+    display: block;
+    color: $blue;
+}
+
+small {
+    font-size: 13px;
+    color: $transpGrey;
+}
 
 
-//Responsive
-//.center-block.is-responsive {
-//  width: 60%; 
-//  height: 60%;
-//  min-width: 200px;
-//  max-width: 400px;
-//  padding: 40px;
-//}
+article span {
+    font: 300 13px/45px $fonts;
+    color: #4c5373;
+    box-shadow: inset 0 0 1px 1px #d9dce5;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+article span.disable {
+    color: #b6bacc;
+    box-shadow: inset 0 0 1px 1px #f3f4f7;
+}
 
+article span:hover {
+    background: $blue;
+    color: #FFFFFF;
+}
 
-
-
-
-
-
+article div {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
 
 
