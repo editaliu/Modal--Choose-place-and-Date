@@ -78,20 +78,17 @@ div p {
     padding-top: 21px;
     border-bottom: $main-border;
     @extend %rowFlex;
-}
-
-.clinics:last-child {
-    border-bottom: none;
-}
-
-.clinics:hover {
-    border-right: $blue-border;
-    border-left: $blue-border;
-}
-
-.clinics img {
-    width: 17.2%;
-    height: 15%;
+    &:last-child {
+        border-bottom: none;
+    }
+    &:hover {
+        border-right: $blue-border;
+        border-left: $blue-border;
+    }
+    img {
+        width: 17.2%;
+        height: 15%;
+    }
 }
 
 .darker {
@@ -152,22 +149,19 @@ section.month {
     float: left;
     height: auto;
 }
+
 //start calendar header
 header {
     position: relative;
     @extend %rowFlex;
     justify-content: $spaceB;
     padding-top: 10px;
-//    padding-bottom: 5px;
+    //    padding-bottom: 5px;
 }
 
 .calendar-row {
     @extend %rowFlex;
     justify-content: $spaceB;
-}
-
-.calendar-row:hover {
-    border-bottom: $slim-border;
 }
 
 header h1 {
@@ -189,12 +183,8 @@ header > img:first-child:hover {
 header > img:last-child:hover {
     border-right: $slim-border;
 }
+
 //end calendar header
-
-.article {
-    padding: 6px 0 25px 25px;
-}
-
 .days {
     padding-top: 4px;
     padding-bottom: 10px;
@@ -210,44 +200,79 @@ header > img:last-child:hover {
     text-align: center;
 }
 
-.article p {
-    font-size: 21px;
-    color: $blue;
-    display: flex;
-    flex-direction: column;
-}
-
 small {
     font-size: 13px;
     color: $transpGrey;
 }
-.article{
+
+.article {
+    //    padding: 6px 0 25px 25px;
     padding-top: 15px;
-}
-.article span {
-    font: 300 13px/45px $fonts;
-    box-shadow: $shadows #d9dce5;
-    border-radius: 4px;
-    cursor: pointer;
+    span {
+        font: 300 13px/45px $fonts;
+        box-shadow: $shadows #d9dce5;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    span.disable {
+        color: #CCCCCC;
+        box-shadow: $shadows #f3f4f7;
+    }
+    span:hover {
+        @extend %backgr;
+    }
+    p {
+        font-size: 21px;
+        color: $blue;
+        display: flex;
+        flex-direction: column;
+    }
+    div {
+        display: block;
+        overflow: hidden;
+        clear: both;
+    }
 }
 
-.article span.disable {
-    color: #CCCCCC;
-    box-shadow: $shadows #f3f4f7;
-}
-
-.article span:hover {
-    @extend %backgr;
-}
 //Class added onclick with jquery
-.clicked{
+.clicked {
     @extend %backgr;
     color: white;
 }
-.article div {
-    display: block;
-    overflow: hidden;
-    clear: both;
+
+//    dropdown calendar content
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li:hover > a,
+li a:active {
+    background-color: $blue;
+    color: white;
+    border-radius: 4px;
+}
+li a{
+    text-decoration: none;
+    color: $fontGrey;
+}
+ul li ul li {
+    float: none;
+    display: none;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
+ul li:hover ul li {
+    display: block;
+}
 
+.dropdown-content {
+    position: absolute;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+}
