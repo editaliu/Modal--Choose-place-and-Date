@@ -16,12 +16,13 @@
         <div class="center-block modal-content">
 
             <!--           Location select-->
-
             <div class="whatToSelect selectClinic">
+<!--               header of location celects-->
                 <div class="select-header">
                     <p class="selectP spaceLeft">Select clinic</p>
                     <p class="spaceLeft">Select where & when you would like to have the consultation</p>
                 </div>
+<!--                all clinics box-->
                 <div class="all-clinics">
                     <div class="clinics" onclick="location.href='#'" style="cursor: pointer">
                         <img class="spaceLeft" alt="Location-Icon" src="Pictures/place-icon.png">
@@ -71,64 +72,72 @@
                     </div>
                 </div>
 
-
-                <!--Calendar-->
-                <section class="month" id="january">
+                <!--Start Calendar-->
+                <div class="month">
+<!--                   header of calendar-->
                     <header class="space-left-right">
                         <img alt="To the left" src="Pictures/leftbbb.png" style="width: 19px; height: 19px">
-                        <nav>
-                            <ul class="top-nav flex-container" id="top-nav-id">
-                                <li class="nav-link">
-                                    <div class="calendar-row" onclick="location.href='#'" style="cursor: pointer">
-                                        <img alt="Calendar-Icon" src="Pictures/calend.png" style="width: 17px; height: 18px">
-                                        <h1> August 27 - 31 </h1>
-                                        <img alt="To the bottom" src="Pictures/down.png" style="width: 19px; height: 20px">
-                                    </div>
-                                    <ul class="dropdown-content">
-                                        <li><a href="#">September 03 - 07</a></li>
-                                        <li><a href="#">September 10 - 14</a></li>
-                                        <li><a href="#">September 17 - 21</a></li>
-                                        <li><a href="#">September 24 - 28</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
+                        <ul class="top-nav flex-container" id="top-nav-id">
+                            <li class="nav-link">
+                                <div class="calendar-row" onclick="location.href='#'" style="cursor: pointer">
+                                    <img alt="Calendar-Icon" src="Pictures/calend.png" style="width: 17px; height: 18px">
+                                    <h1> August 27 - 31 </h1>
+                                    <img alt="To the bottom" src="Pictures/down.png" style="width: 19px; height: 20px">
+                                </div>
+                                <!--    Dropdown Content-->
+                                <ul class="dropdown-content">
+                                    <li><a href="#">September 03 - 07</a></li>
+                                    <li><a href="#">September 10 - 14</a></li>
+                                    <li><a href="#">September 17 - 21</a></li>
+                                    <li><a href="#">September 24 - 28</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                         <img alt="To the right" src="Pictures/rightBB.png" style="width: 19px; height: 19px">
                     </header>
-
+                    <!--Days-->
                     <div class="article space-left-right">
                         <div class="days">
-                            <p>27 <small>Mon</small></p>
-                            <p>28 <small>Tue</small></p>
-                            <p>29 <small>Wed</small></p>
-                            <p>30 <small>Thu</small></p>
-                            <p>31 <small>Fri</small></p>
+                            <div>
+                                <p>27 <small>Mon</small></p>
+                                <span class="disable">08:00</span>
+                                <span>13:00</span>
+                                <span class="disable">15:00</span>
+                                <span>16:00</span>
+                            </div>
+                            <div>
+                                <p>28 <small>Tue</small></p>
+                                <span>08:00</span>
+                                <span class="disable">13:00</span>
+                                <span>15:00</span>
+                                <span class="disable">16:00</span>
+                            </div>
+                            <div>
+                                <p>29 <small>Wed</small></p>
+                                <span class="disable">08:00</span>
+                                <span class="disable">13:00</span>
+                                <span>15:00</span>
+                                <span class="disable">16:00</span>
+                            </div>
+                            <div>
+                                <p>30 <small>Thu</small></p>
+                                <span>08:00</span>
+                                <span>13:00</span>
+                                <span class="disable">15:00</span>
+                                <span>16:00</span>
+                            </div>
+                            <div>
+                                <p>31 <small>Fri</small></p>
+                                <span class="disable">08:00</span>
+                                <span>13:00</span>
+                                <span>15:00</span>
+                                <span class="disable">16:00</span>
+                            </div>
                         </div>
 
-                        <div class="dates">
-                            <span class="disable">08:00</span>
-                            <span>08:00</span>
-                            <span class="disable">08:00</span>
-                            <span>08:00</span>
-                            <span class="disable">08:00</span>
-                            <span>13:00</span>
-                            <span class="disable">13:00</span>
-                            <span class="disable">13:00</span>
-                            <span>13:00</span>
-                            <span>13:00</span>
-                            <span class="disable">15:00</span>
-                            <span>15:00</span>
-                            <span>15:00</span>
-                            <span class="disable">15:00</span>
-                            <span>15:00</span>
-                            <span>16:00</span>
-                            <span class="disable">16:00</span>
-                            <span class="disable">16:00</span>
-                            <span>16:00</span>
-                            <span class="disable">16:00</span>
-                        </div>
                     </div>
-                </section>
+                </div>
+                <!--End Calendar-->
 
             </div>
 
